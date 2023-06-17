@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+.headerMainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #131313;
+  /* opacity: 0.4; */
+  /* background-color: red; */
+  flex-grow: 1;
+}
+
+.headerRoutesContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  align-items: center;
+  margin-bottom: 1%;
+  /* margin-left: 5%; */
+}
+
+.linkItemHeader {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* background-color: white; */
+  letter-spacing: -0.355556px;
+
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+.headerTopContainer {
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* height: 10vh; */
+  align-items: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 3%;
+  margin-right: 3%;
+  /* background-color: red; */
+}
+
+.headerLogoAndRoutes {
+  margin-left: 5%;
+  display: flex;
+
+  align-items: center;
+}
+
+.desktopHeaderRoutes {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20vw;
+  display: none;
+  /* background-color: red; */
+}
+
+.linkStyleHeaders {
+  display: flex;
+}
+
+.closeMenuButton {
+  background-color: transparent;
+  border: none;
+}
+
+.headerWebsiteLogo {
+  width: 100px;
+  height: 27px;
+  margin-left: 5%;
+}
+
+.searchMenuContainer {
+  width: 35%;
+  background-color: red;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: transparent;
+  align-items: center;
+}
+
+.searchRouteContainer {
+  /* padding: 1px; */
+  /* gap: 28px;
+ 
+  /* display: flex; */
+  width: 70%;
+  margin-left: 10%;
+  display: flex;
+  /* margin-right: 15%; */
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  justify-content: flex-end;
+}
+
+.searchInputStyle {
+  width: 90%;
+  background-color: #131313;
+  color: #ffffff;
+}
+
+.searchRouteButton {
+  background-color: #2c2b2b;
+  border: none;
+}
+
+/* .searchRouteIcon {
+  background-color: #2c2b2b;
+} */
+
+.profileRoute {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .headerTopContainer {
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .desktopHeaderRoutes {
+    display: block;
+  }
+
+  .headerLogoAndRoutes {
+    margin-left: 2%;
+  }
+
+  .headerWebsiteLogo {
+    width: 120px;
+  }
+
+  .menuIconHeader {
+    display: none;
+  }
+
+  .profileRoute {
+    display: block;
+  }
+  .searchRouteContainer {
+    width: 20%;
+    margin-left: 30%;
+    /* margin-right: -50px; */
+  }
+
+  .searchMenuContainer {
+    width: 20%;
+  }
+}

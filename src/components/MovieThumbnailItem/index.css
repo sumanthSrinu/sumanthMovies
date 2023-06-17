@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.popularThumbnailItemStyle {
+  /* width: 23%;
+  /* margin-right: 25px; */
+  /* margin-top: 10px;
+  display: flex;
+  border-radius: 4px;
+  height: 25vh; */
+
+  /* margin-bottom: 10px; */
+  /* margin-left: -20px; */
+  /* border-radius: 4px; */
+  width: 28%;
+  display: flex;
+  height: 13vh;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.popularLinkItem {
+  width: 100%;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+@media (min-width: 992px) {
+  .popularThumbnailItemStyle {
+    width: 23%;
+    margin-right: 25px;
+    margin-top: 10px;
+    display: flex;
+    border-radius: 4px;
+    height: 25vh;
+
+    margin-bottom: 10px;
+
+    border-radius: 4px;
+  }
+}

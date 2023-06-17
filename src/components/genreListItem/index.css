@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.genreItemStyle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+
+  color: #ffffff;
+}

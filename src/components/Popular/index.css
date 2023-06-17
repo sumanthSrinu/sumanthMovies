@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.popularMainContainer {
+  background: #131313;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.arrowStylePopular {
+  background-color: #131313;
+  border: none;
+}
+
+.pagesCountPara {
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: #cbd5e1;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.popularMoviesListContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+  /* flex-wrap: initial; */
+  justify-content: flex-start;
+
+  align-items: center;
+  width: 100%;
+  /* overflow: auto; */
+  height: 65%;
+  /* background-color: blue; */
+
+  /* margin-left: 5%; */
+}
+
+.popularFailureViewContainer {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popularFailurePara {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.loaderContainer {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.popularFailureButton {
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (min-width: 992px) {
+  .popularMoviesListContainer {
+    width: 90%;
+    /* height: 60vh; */
+  }
+
+  .popularMainContainer {
+    height: inherit;
+  }
+}

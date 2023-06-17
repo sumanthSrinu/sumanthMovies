@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+.loginMainContainer {
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.trigger-button {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: white;
+  padding: 8px 15px 8px 15px;
+  margin: 8px;
+  background-color: transparent;
+  border: none;
+  /* border-radius: 4px; */
+  outline: none;
+}
+
+.forgertImageStyl {
+  height: 80%;
+  width: 80%;
+}
+.closePopUp {
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  /* height: 20vh; */
+  width: 90vw;
+}
+.popup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 20vh; */
+  /* background-color: #e2e8f0; */
+  background-color: transparent;
+}
+
+.loginForgetPassword {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.passwordContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginWebsiteLogo {
+  width: 100px;
+  height: 27px;
+  margin-top: 32px;
+  margin-left: 32px;
+  align-self: flex-start;
+}
+
+.loginText {
+  font-family: Roboto;
+  font-style: medium;
+  font-size: 32px;
+  line-height: 40px;
+
+  font-weight: 500;
+  color: #ffffff;
+  margin-left: 32px;
+  align-self: flex-start;
+}
+
+.LoginInputContainer {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  width: 84%;
+  margin-bottom: 16px;
+}
+
+.loginLabelStyle {
+  width: 65px;
+  height: 16px;
+  font-family: Roboto;
+  font-style: Bold;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.loginInputStyle {
+  height: 40px;
+  background-color: #333333;
+  border: none;
+  margin-top: 8px;
+  border-radius: 2px;
+  color: #e2e8f0;
+  font-family: 'HK Grotesk';
+  font-size: 14px;
+  padding: 10px;
+}
+
+.loginButton {
+  margin-left: 32px;
+  margin-right: 32px;
+  height: 40px;
+  background: #e50914;
+  border-radius: 4px;
+
+  border: none;
+  color: #ffffff;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  width: 84%;
+}
+
+.loginErrorMsg {
+  color: #dc2626;
+  margin-left: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  align-self: flex-start;
+  margin-top: -1px;
+  margin-bottom: 10px;
+}
+
+.LoginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  /* align-self: center; */
+  width: 100%;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (min-width: 992px) {
+  .loginMainContainer {
+    background-image: url('https://res.cloudinary.com/dtnsnrzmf/image/upload/v1684394562/netfilx_1_l4hsbf.png');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginWebsiteLogo {
+    align-self: flex-start;
+    margin-left: 100px;
+  }
+
+  .LoginFormContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0c0b10;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    border-radius: 8px;
+    opacity: 80%;
+  }
+
+  .loginErrorMsg {
+    align-self: flex-start;
+  }
+
+  .LoginInputContainer {
+    /* background-color: red; */
+    width: 90%;
+  }
+
+  .loginButton {
+    width: 90%;
+    margin-bottom: 10%;
+    margin-top: 4%;
+  }
+
+  .loginText {
+    margin-top: 10%;
+    font-family: 'HK Grotesk';
+    font-style: SemiBold;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    align-self: center;
+  }
+}

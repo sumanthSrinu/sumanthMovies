@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+.movieDetailsPageMainContainer1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.movieDetailsContentContainer {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.movieDetailsTopContainer {
+  /* margin-top: 12vh; */
+
+  flex-grow: 0;
+}
+
+.movieDetailsBackgroundImageDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 8%;
+  margin-right: 5%;
+  margin-top: 10%;
+}
+
+.movieDetailsLoader-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+}
+
+.movieDetailsTopContextContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(24, 24, 24, 0.546875) 38.26%,
+    #131313 92.82%,
+    #131313 98.68%,
+    #131313 108.61%
+  );
+}
+
+.movieDetailsRuntimeContainer {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  /* background-color: red; */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.backgroundTitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.backgroundOverview {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+}
+
+.movieDetailsPlayButton {
+  padding: 8px 24px;
+  border: none;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.movieDetailsBottomContainer {
+  flex-grow: 1;
+  background-color: #131313;
+}
+
+.genreAndOthersList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+
+.movieItemDetailsTextHeading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #64748b;
+}
+
+.similarMoviesListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: red; */
+
+  margin-left: -15px;
+}
+
+.movieDetailsFailureView {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+  height: 100vh;
+}
+
+.certificatepara {
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+}
+
+.genreItemPara {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: -1px;
+  /* line-height: 24px; */
+  /* background-color: red; */
+  /* or 150% */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.movieDetailsPara2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #ffffff;
+  margin-left: 8%;
+}
+
+.movieDetailsItemStyle {
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  .genreAndOthersList {
+    margin-left: 5%;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .movieDetailsRuntimeContainer {
+    width: 13%;
+    margin-top: -15px;
+  }
+
+  .similarMoviesListContainer {
+    margin-left: 5%;
+  }
+}

@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+.accountMainContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  width: 100%;
+  /* background-color: #e5e5e5; */
+  height: 100vh;
+}
+
+.accountPageContext {
+  margin-top: 8%;
+  margin-bottom: 4%;
+  margin-left: 8%;
+  margin-right: 8%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.accountTextContainer {
+  width: 100%;
+  border-bottom: 2px solid #cbd5e1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.accountHeading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #131313;
+}
+
+.membershipTextContainer {
+  width: 100%;
+  border-bottom: 2px solid #cbd5e1;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.membershipStyle {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+
+  color: #94a3b8;
+  margin-right: 30px;
+}
+
+.premiumAccountDetails {
+  display: flex;
+  width: 50%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ultrahdDesign {
+  padding: 2px 4px;
+  gap: 10px;
+  border: 1px solid #1e293b;
+  border-radius: 2px;
+}
+
+.logoutButton {
+  background: #e50914;
+  border-radius: 4px;
+  padding: 8px 20px;
+  border: none;
+  color: #ffffff;
+  margin-top: 15%;
+  margin-bottom: 20%;
+}
+
+.accountpasswordStyle {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #64748b;
+}
