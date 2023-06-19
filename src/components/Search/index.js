@@ -117,7 +117,7 @@ class Search extends Component {
         {apiStatus && (
           <>
             {isLoading && (
-              <div className="searchLoadingContainer" testid="loader">
+              <div className="searchLoadingContainer">
                 <Loader
                   type="TailSpin"
                   color="#D81F26"
@@ -187,7 +187,7 @@ class Search extends Component {
         {apiStatus === false && (
           <>
             {isLoading && (
-              <div className="searchLoadingContainer" testid="loader">
+              <div className="searchLoadingContainer">
                 <Loader
                   type="TailSpin"
                   color="#D81F26"

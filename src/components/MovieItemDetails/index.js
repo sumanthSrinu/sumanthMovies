@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {parseISO, getYear} from 'date-fns'
@@ -165,7 +166,7 @@ class MovieItemDetails extends Component {
             <>
               <Header />
               {isLoading && (
-                <div className="movieDetailsLoader-container" testid="loader">
+                <div className="movieDetailsLoader-container">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
@@ -194,9 +195,11 @@ class MovieItemDetails extends Component {
                     </div>
 
                     <p className="backgroundOverview">{overview}</p>
-                    <button className="movieDetailsPlayButton" type="button">
-                      Play
-                    </button>
+                    <Link to="/play">
+                      <button className="movieDetailsPlayButton" type="button">
+                        Play
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -277,7 +280,7 @@ class MovieItemDetails extends Component {
               <Header enabled />
 
               {isLoading && (
-                <div className="movieDetailsLoader-container" testid="loader">
+                <div className="movieDetailsLoader-container">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"

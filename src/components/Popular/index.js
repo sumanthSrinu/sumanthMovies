@@ -96,7 +96,7 @@ class Popular extends Component {
             <Header />
             {isLoading && (
               <div className="loaderContainer">
-                <div className="loader-container" testid="loader">
+                <div className="loader-container">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
@@ -152,7 +152,7 @@ class Popular extends Component {
             <Header enabled />
             {isLoading && (
               <div className="loaderContainer">
-                <div className="loader-container" testid="loader">
+                <div className="loader-container">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"

@@ -89,7 +89,6 @@ class Header extends Component {
 
               <button
                 type="button"
-                testid="searchButton"
                 className="searchRouteButton"
                 onClick={this.searchClicked}
               >

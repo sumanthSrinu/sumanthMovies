@@ -10,6 +10,7 @@ import LoginDetailsContext from './context/loginDetailsContext'
 import NotFound from './components/NotFound'
 import Search from './components/Search'
 import ProtectedRoute from './components/ProtectedRoute'
+import Play from './components/play'
 
 import './App.css'
 
@@ -64,6 +65,7 @@ class App extends Component {
           />
           <ProtectedRoute exact path="/account" component={Account} />
           <ProtectedRoute exact path="/search" component={Search} />
+          <ProtectedRoute exact path="/play" component={Play} />
           <Route path="/not-found" component={NotFound} />
           <Redirect to="/not-found" />
         </Switch>
