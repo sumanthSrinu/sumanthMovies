@@ -172,7 +172,7 @@ body {
     align-items: center;
     width: 35%;
     border-radius: 8px;
-    opacity: 80%;
+    /* opacity: 80%; */
   }
 
   .loginErrorMsg {

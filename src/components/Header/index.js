@@ -1,6 +1,5 @@
-import {Link, withRouter} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {Component} from 'react'
-import Cookies from 'js-cookie'
 
 import LoginDetailsContext from '../../context/loginDetailsContext'
 import './index.css'
@@ -24,6 +23,7 @@ class Header extends Component {
 
   searchClicked = () => {
     const {searchText} = this.state
+    // this.setState({searchEnabled: false})
 
     const {passSearchText} = this.context
     passSearchText(searchText)
@@ -46,12 +46,7 @@ class Header extends Component {
   }
 
   render() {
-    const {
-      menuClicked,
-      accountPathClicked,
-      searchEnabled,
-      searchText,
-    } = this.state
+    const {menuClicked, accountPathClicked, searchEnabled} = this.state
 
     return (
       <div className="headerMainContainer">
@@ -66,25 +61,21 @@ class Header extends Component {
             </Link>
 
             <ul className="desktopHeaderRoutes">
-              <li className="linkStyleHeaders">
-                <Link
-                  to="/"
-                  className="linkItemHeader "
-                  onClick={this.homeRouteClicked}
-                >
-                  Home
-                </Link>
-              </li>
+              <Link
+                to="/"
+                className="linkItemHeader "
+                onClick={this.homeRouteClicked}
+              >
+                Home
+              </Link>
 
-              <li className="linkStyleHeaders">
-                <Link
-                  to="/popular"
-                  className="linkItemHeader "
-                  onClick={this.popularRouteClicked}
-                >
-                  Popular
-                </Link>
-              </li>
+              <Link
+                to="/popular"
+                className="linkItemHeader "
+                onClick={this.popularRouteClicked}
+              >
+                Popular
+              </Link>
             </ul>
           </div>
           {searchEnabled ? (
@@ -98,7 +89,7 @@ class Header extends Component {
 
               <button
                 type="button"
-                // testid="searchButton"
+                testid="searchButton"
                 className="searchRouteButton"
                 onClick={this.searchClicked}
               >

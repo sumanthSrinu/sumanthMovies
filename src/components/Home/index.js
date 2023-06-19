@@ -50,6 +50,7 @@ class Home extends Component {
     title: '',
     overview: '',
     backgroundUrl: '',
+    randomId: '',
     isLoadingOriginalList: true,
     isLoadingTrendingList: true,
 
@@ -106,6 +107,7 @@ class Home extends Component {
       backgroundUrl: randomItem.backgroundWallpaper,
       overview: randomItem.overview,
       title: randomItem.title,
+      randomId: randomItem.id,
     })
   }
 
@@ -222,6 +224,7 @@ class Home extends Component {
       topRatedList,
       isLoadingTopRatedList,
       apiStatusTopRatedList,
+      randomId,
     } = this.state
 
     return (
@@ -242,9 +245,12 @@ class Home extends Component {
                     <div className="topContainerContext">
                       <h1 className="backgroundTitle">{title}</h1>
                       <p className="backgroundOverview">{overview}</p>
-                      <button className="homePlayButton" type="button">
-                        Play
-                      </button>
+
+                      <Link to={`/movies/${randomId}`}>
+                        <button className="homePlayButton" type="button">
+                          Play
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -252,7 +258,7 @@ class Home extends Component {
             )}
 
             {isLoadingOriginalList && (
-              <div className="apiErrorContainer1">
+              <div className="apiErrorContainer1" testid="loader">
                 <Loader
                   type="TailSpin"
                   color="#D81F26"
@@ -283,7 +289,7 @@ class Home extends Component {
               <h1 className="trendingNow">Trending Now</h1>
 
               {isLoadingTrendingList && (
-                <div className="apiErrorContainer3">
+                <div className="apiErrorContainer3" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
@@ -333,7 +339,7 @@ class Home extends Component {
               <h1 className="trendingNow">Popular</h1>
 
               {isLoadingTopRatedList && (
-                <div className="apiErrorContainer3">
+                <div className="apiErrorContainer3" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
@@ -382,7 +388,7 @@ class Home extends Component {
             <div className="slider-container">
               <h1 className="trendingNow">Originals</h1>
               {isLoadingOriginalList && (
-                <div className="apiErrorContainer3">
+                <div className="apiErrorContainer3" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"

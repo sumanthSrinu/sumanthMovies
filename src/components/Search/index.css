@@ -4,6 +4,16 @@
 
 .SearchMainContainer {
   background: #131313;
+  height: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.searchMainContainer2 {
+  background: #131313;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -14,10 +24,15 @@
 
 .SearchMoviesListContainer {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
+  /* flex-wrap: initial; */
+  justify-content: flex-start;
+
+  align-items: center;
   width: 100%;
-  overflow: auto;
+  /* overflow: auto; */
+  height: 65%;
   /* background-color: blue; */
 
   /* margin-left: 5%; */
@@ -65,5 +80,14 @@
 
   .SearchMainContainer {
     height: inherit;
+  }
+  .searchMainContainer2 {
+    background: #131313;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }

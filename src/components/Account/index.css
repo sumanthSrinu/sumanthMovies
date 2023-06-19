@@ -13,16 +13,19 @@
 }
 
 .accountPageContext {
-  margin-top: 8%;
-  margin-bottom: 4%;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-top: 3%;
+  /* margin-bottom: 4%; */
+  margin-left: 5%;
+  margin-right: 5%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  align-items: center;
+}
+.membershipMainContainer {
+  width: 100%;
+  border-bottom: 2px solid #cbd5e1;
 }
 
 .accountTextContainer {
@@ -43,12 +46,13 @@
 }
 
 .membershipTextContainer {
-  width: 100%;
-  border-bottom: 2px solid #cbd5e1;
+  width: 30%;
+
   display: flex;
   justify-content: flex-start;
   padding-top: 10px;
   padding-bottom: 10px;
+  align-items: flex-start;
 }
 
 .membershipStyle {
@@ -83,8 +87,10 @@
   padding: 8px 20px;
   border: none;
   color: #ffffff;
-  margin-top: 15%;
-  margin-bottom: 20%;
+  margin-top: 5%;
+  /* margin-bottom: 20%;  */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .accountpasswordStyle {
@@ -94,4 +100,10 @@
   font-size: 16px;
   line-height: 21px;
   color: #64748b;
+}
+
+@media (max-width: 996px) {
+  .membershipTextContainer {
+    width: 100%;
+  }
 }

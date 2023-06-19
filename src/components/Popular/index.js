@@ -1,134 +1,3 @@
-// import {Component} from 'react'
-// import Cookies from 'js-cookie'
-// import Loader from 'react-loader-spinner'
-
-// import Header from '../Header'
-// import MovieThumbnailItem from '../MovieThumbnailItem'
-
-// import './index.css'
-
-// class Popular extends Component {
-//   state = {popularMoviesList: [], apiStatus: true, isLoading: true}
-
-//   componentDidMount() {
-//     this.getPopularMoviesList()
-//   }
-
-//   tryAgainClicked = () => {
-//     this.getPopularMoviesList()
-//   }
-
-//   popularApiSuccess = popularList => {
-//     this.setState({apiStatus: true})
-//     const refinedPopularMoviesList = popularList.map(eachItem => ({
-//       backgroundWallpaper: eachItem.backdrop_path,
-//       id: eachItem.id,
-//       overview: eachItem.overview,
-//       poster: eachItem.poster_path,
-//       title: eachItem.title,
-//     }))
-//     this.setState({popularMoviesList: refinedPopularMoviesList})
-//   }
-
-//   getPopularMoviesList = async () => {
-//     this.setState({isLoading: true})
-//     const jwtToken = Cookies.get('jwt_token')
-
-//     const popularMoviesApi = 'https://apis.ccbp.in/movies-app/popular-movies'
-
-//     const options = {
-//       method: 'GET',
-//       headers: {
-//         Authorization: `Bearer ${jwtToken}`,
-//       },
-//     }
-
-//     const response = await fetch(popularMoviesApi, options)
-//     const data = await response.json()
-//     console.log(data)
-//     this.setState({isLoading: false})
-
-//     if (response.ok) {
-//       this.popularApiSuccess(data.results)
-//     } else {
-//       this.setState({apiStatus: false})
-//     }
-//   }
-
-//   render() {
-//     const {popularMoviesList, apiStatus, isLoading} = this.state
-//     console.log(apiStatus)
-
-//     return (
-//       <div className="popularMainContainer">
-//         {apiStatus && (
-//           <>
-//             <Header />
-//             {isLoading && (
-//               <div className="loaderContainer">
-//                 <div className="loader-container"  >
-//                   <Loader
-//                     type="TailSpin"
-//                     color="#D81F26"
-//                     height={50}
-//                     width={50}
-//                   />
-//                 </div>
-//               </div>
-//             )}
-//             <ul className="popularMoviesListContainer">
-//               {popularMoviesList.map(eachItem => (
-//                 <MovieThumbnailItem
-//                   eachThumbnail={eachItem}
-//                   key={eachItem.id}
-//                 />
-//               ))}
-//             </ul>
-//           </>
-//         )}
-
-//         {!apiStatus && (
-//           <>
-//             <Header enabled />
-//             {isLoading && (
-//               <div className="loaderContainer">
-//                 <div className="loader-container"  >
-//                   <Loader
-//                     type="TailSpin"
-//                     color="#D81F26"
-//                     height={50}
-//                     width={50}
-//                   />
-//                 </div>
-//               </div>
-//             )}
-//             <div className="popularFailureViewContainer">
-//               <img
-//                 src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1685016247/Group_ysew8z.png"
-//                 alt="failure view"
-//               />
-
-//               <p className="popularFailurePara">
-//                 {' '}
-//                 Something went wrong, Please try again.
-//               </p>
-//               <button
-//                 type="button"
-//                 onClick={this.tryAgainClicked}
-//                 className="popularFailureButton"
-//               >
-//                 Try Again
-//               </button>
-//             </div>
-//           </>
-//         )}
-//       </div>
-//     )
-//   }
-// }
-
-// export default Popular
-
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
@@ -219,13 +88,15 @@ class Popular extends Component {
     )
 
     return (
-      <div className="popularMainContainer">
+      <div
+        className={isLoading ? 'popularMainContainer2' : 'popularMainContainer'}
+      >
         {apiStatus && (
           <>
             <Header />
             {isLoading && (
               <div className="loaderContainer">
-                <div className="loader-container">
+                <div className="loader-container" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
@@ -281,7 +152,7 @@ class Popular extends Component {
             <Header enabled />
             {isLoading && (
               <div className="loaderContainer">
-                <div className="loader-container">
+                <div className="loader-container" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"

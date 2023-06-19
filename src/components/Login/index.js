@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
-import Popup from 'reactjs-popup'
 
 import LoginDetailsContext from '../../context/loginDetailsContext'
 
@@ -106,38 +105,6 @@ class Login extends Component {
                     <label htmlFor="passwordInput" className="loginLabelStyle">
                       PASSWORD
                     </label>
-
-                    {/* <p className="loginForgetPassword">Forget Password?</p> */}
-                    {/* <div className="popup-container">
-                      <Popup
-                        modal
-                        trigger={
-                          <button type="button" className="trigger-button">
-                            Forget Password?
-                          </button>
-                        }
-                      >
-                        {close => (
-                          <>
-                            <div className="closePopUp">
-                              <p>Relax and try to remember your password</p>
-                              <img
-                                src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686570840/Forgot_password-amico_xsyz4s.png"
-                                className="forgertImageStyl"
-                              />
-                            </div>
-                            <button
-                              type="button"
-                              className="trigger-button"
-                              onClick={() => close()}
-                            >
-                              Close
-                            </button>
-                          </>
-                        )}
-                      </Popup>
-                    </div>
-                 */}
                   </div>
 
                   <input

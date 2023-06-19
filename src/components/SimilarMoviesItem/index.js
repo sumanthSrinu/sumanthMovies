@@ -3,7 +3,7 @@ import './index.css'
 
 const SimilarMoviesItem = props => {
   const {eachThumbnail, similarItemSelected} = props
-  const {backgroundWallpaper, id, title, poster} = eachThumbnail
+  const {backgroundWallpaper, id, title} = eachThumbnail
 
   const imageSelected = () => {
     similarItemSelected()

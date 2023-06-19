@@ -6,6 +6,7 @@ import LoginDetailsContext from '../../context/loginDetailsContext'
 import MovieThumbnailItem from '../MovieThumbnailItem'
 
 import Header from '../Header'
+import Footer from '../Footer'
 
 import './index.css'
 
@@ -104,13 +105,19 @@ class Search extends Component {
     )
 
     return (
-      <div className="SearchMainContainer">
+      <div
+        className={
+          currentItems.length > 10
+            ? 'SearchMainContainer'
+            : 'searchMainContainer2'
+        }
+      >
         <Header searchEnabled enabled />
 
         {apiStatus && (
           <>
             {isLoading && (
-              <div className="searchLoadingContainer">
+              <div className="searchLoadingContainer" testid="loader">
                 <Loader
                   type="TailSpin"
                   color="#D81F26"
@@ -120,55 +127,59 @@ class Search extends Component {
               </div>
             )}
 
-            <ul className="SearchMoviesListContainer">
-              {currentItems.map(eachItem => (
-                <MovieThumbnailItem
-                  eachThumbnail={eachItem}
-                  key={eachItem.id}
-                />
-              ))}
-            </ul>
-            <div className="pagination">
-              {currentPage > 1 && (
-                <button
-                  onClick={() => this.handlePageChange(currentPage - 1)}
-                  type="button"
-                  className="arrowStylePopular"
-                >
-                  <img
-                    src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686561964/Icon_t5ahg6.png"
-                    alt="leftArrow"
-                  />
-                </button>
-              )}
+            {!isLoading && (
+              <>
+                <ul className="SearchMoviesListContainer">
+                  {currentItems.map(eachItem => (
+                    <MovieThumbnailItem
+                      eachThumbnail={eachItem}
+                      key={eachItem.id}
+                    />
+                  ))}
+                </ul>
+                <div className="pagination">
+                  {currentPage > 1 && (
+                    <button
+                      onClick={() => this.handlePageChange(currentPage - 1)}
+                      type="button"
+                      className="arrowStylePopular"
+                    >
+                      <img
+                        src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686561964/Icon_t5ahg6.png"
+                        alt="leftArrow"
+                      />
+                    </button>
+                  )}
 
-              <p className="pagesCountPara">
-                {currentPage} of {totalPages}
-              </p>
-              {currentPage < totalPages && (
-                <button
-                  onClick={() => this.handlePageChange(currentPage + 1)}
-                  type="button"
-                  className="arrowStylePopular"
-                >
-                  <img
-                    src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686563556/Icon_aqg4vh.png"
-                    alt="rightarrow"
-                  />
-                </button>
-              )}
-            </div>
-
-            {searchMoviesList.length === 0 && (
-              <div className="searchRouteNoMovies">
-                <img
-                  src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686138438/Group_7394_k0bpag.png"
-                  alt="no movies"
-                />
-                <p className="searchNoMoviesPara">
-                  Your search for {headerSearchText} did not find any matches.
-                </p>
-              </div>
+                  <p className="pagesCountPara">
+                    {currentPage} of {totalPages}
+                  </p>
+                  {currentPage < totalPages && (
+                    <button
+                      onClick={() => this.handlePageChange(currentPage + 1)}
+                      type="button"
+                      className="arrowStylePopular"
+                    >
+                      <img
+                        src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686563556/Icon_aqg4vh.png"
+                        alt="rightarrow"
+                      />
+                    </button>
+                  )}
+                </div>
+                {searchMoviesList.length === 0 && (
+                  <div className="searchRouteNoMovies">
+                    <img
+                      src="https://res.cloudinary.com/dtnsnrzmf/image/upload/v1686138438/Group_7394_k0bpag.png"
+                      alt="no movies"
+                    />
+                    <p className="searchNoMoviesPara">
+                      Your search for {headerSearchText} did not find any
+                      matches.
+                    </p>
+                  </div>
+                )}
+              </>
             )}
           </>
         )}
@@ -176,7 +187,7 @@ class Search extends Component {
         {apiStatus === false && (
           <>
             {isLoading && (
-              <div className="searchLoadingContainer">
+              <div className="searchLoadingContainer" testid="loader">
                 <Loader
                   type="TailSpin"
                   color="#D81F26"
@@ -203,6 +214,8 @@ class Search extends Component {
             </div>
           </>
         )}
+
+        <Footer />
       </div>
     )
   }

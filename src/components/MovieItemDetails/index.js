@@ -115,7 +115,7 @@ class MovieItemDetails extends Component {
 
     const {
       poster,
-      id,
+
       title,
       overview,
       adult,
@@ -165,7 +165,7 @@ class MovieItemDetails extends Component {
             <>
               <Header />
               {isLoading && (
-                <div className="movieDetailsLoader-container">
+                <div className="movieDetailsLoader-container" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
@@ -277,7 +277,7 @@ class MovieItemDetails extends Component {
               <Header enabled />
 
               {isLoading && (
-                <div className="movieDetailsLoader-container">
+                <div className="movieDetailsLoader-container" testid="loader">
                   <Loader
                     type="TailSpin"
                     color="#D81F26"
