@@ -10,36 +10,15 @@ import Header from '../Header/index'
 import Footer from '../Footer'
 import './index.css'
 
+const isMobileView = window.innerWidth < 996
+
 const settings = {
   dots: false,
   infinite: false,
 
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: isMobileView ? 3 : 4,
   slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-  ],
 }
 
 class Home extends Component {
@@ -68,7 +47,7 @@ class Home extends Component {
   }
 
   trendingMoviesApiSuccess = trendingMoviesList => {
-    const isMobileView = window.innerWidth < 996
+    // const isMobileView = window.innerWidth < 996
 
     const refinedTrendingMoviesList = trendingMoviesList.map(eachItem => ({
       backgroundWallpaper: isMobileView
@@ -83,7 +62,7 @@ class Home extends Component {
   }
 
   originalsApiSuccess = originalsData => {
-    const isMobileView = window.innerWidth < 996
+    // const isMobileView = window.innerWidth < 996
 
     const refinedoriginalsList = originalsData.map(eachItem => ({
       backgroundWallpaper: isMobileView
@@ -111,7 +90,7 @@ class Home extends Component {
   }
 
   topRatedListSuccess = topRatedData => {
-    const isMobileView = window.innerWidth < 996
+    // const isMobileView = window.innerWidth < 996
 
     const refinedTopRatedList = topRatedData.map(eachItem => ({
       backgroundWallpaper: isMobileView

@@ -129,19 +129,19 @@ class Header extends Component {
 
         {menuClicked && (
           <ul className="headerRoutesContainer">
-            <li>
+            <li className="linkStyleHeaders">
               <Link to="/" className="linkItemHeader ">
                 Home
               </Link>
             </li>
 
-            <li>
+            <li className="linkStyleHeaders">
               <Link to="/popular" className="linkItemHeader ">
                 Popular
               </Link>
             </li>
 
-            <li>
+            <li className="linkStyleHeaders">
               <Link
                 to="/account"
                 className="linkItemHeader "
